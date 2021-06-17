@@ -1,0 +1,23 @@
+.logo {
+  @include font($fs:26px, $fw: 700, $lh: 30.52px);
+
+  color: $title-text-color;
+  font-family: $secondary--font-family;
+  letter-spacing: 0.03em;
+
+  &__text {
+    color: $accent-color;
+  }
+
+  &_color_white {
+    color: $primery-white-color;
+  }
+
+  &_margin-bottom {
+    margin-bottom: 20px;
+  }
+
+  &_display-inline-block {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,71 @@
+.team {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--bg-grey-color);
+
+  .team__title {
+    @include font($fs: 36px, $fw:700, $lh:42px);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .team__item {
+    flex-basis: calc((100% - (30px * 3)) / 4);
+    background-color: $primery-white-color;
+    box-shadow: $box-shadow;
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .team-content__title {
+    margin-bottom: 10px;
+    @include font($fs:16px,$fw:500, $lh: 19px); 
+    text-align: center;
+  }
+
+  .team-content__descr {
+    margin-bottom: 16px;
+    @include font($fs:16px, $lh: 19px);
+    text-align: center;
+  }
+
+  .team-content__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
+  .team-content__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 100%;
+    fill: $color-link-grey;
+    transition: background-color 250ms $timing-function, fill 250ms $timing-function;
+    
+    &:hover,
+    &:focus {
+      background-color: #2196f3;
+      fill: $primery-white-color;
+    }
+  }
+}

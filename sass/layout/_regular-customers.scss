@@ -1,0 +1,38 @@
+.regular-customers {
+  display: flex;
+
+  .regular-customers__title {
+    margin-bottom: 50px;
+    @include font($fs: 36px, $fw:700, $lh:42px);
+    text-align: center;
+  }
+
+  .regular-customers__content {
+    display: flex;
+  }
+
+  &__item:not(:last-of-type) {
+    margin-right: 30px;
+  }
+
+  .regular-customers__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    min-height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    cursor: pointer;
+    fill: $color-link-grey;
+    transition: border-color 250ms $timing-function,
+      fill 250ms $timing-function;
+    
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+}
+

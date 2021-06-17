@@ -1,0 +1,26 @@
+.modal-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  background-color: $accent-color;
+  color: $primery-white-color;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: $btn-shadow;
+  border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms $timing-function;
+  letter-spacing: 0.06em;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-hover-blue-color;
+    }
+  
+  &_padding_horizont {
+    padding: 10px 55px;
+  }
+}
