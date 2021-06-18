@@ -808,11 +808,12 @@ h3 {
   }
 }
 
-.features {
-  display: block;
+.features .features__list {
+  margin-bottom: -30px;
 }
 
-.features .features__item:not(:last-of-type) {
+.features .features__item {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -839,6 +840,31 @@ h3 {
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .features .features__item {
+    -ms-flex-preferred-size: calc((100% - 30px * 2) / 2);
+        flex-basis: calc((100% - 30px * 2) / 2);
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .features__item {
+    -ms-flex-preferred-size: calc((100% - (30px * 4)) / 4);
+        flex-basis: calc((100% - (30px * 4)) / 4);
+  }
 }
 
 .aboutUs {
