@@ -2,14 +2,10 @@
   background-color: $bg-dark-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 
-  .container {
-    display: flex;
-    align-items: baseline;
-  }
-
-  &__item:not(:last-of-type) {
-    margin-bottom: 9px;
+  .footer__list {
+    margin-bottom: 60px;
   }
 
   .footer__link {
@@ -20,108 +16,293 @@
   .footer__link_color-white {
     color: $primery-white-color;
   }
-}
 
-.footer-social {
-  margin-left: 70px;
+  .footer-social {
+    margin-bottom: 60px;
 
-  .footer-social__title {
-    margin-bottom: 20px;
-    @include font($fs:14px, $fw:700, $lh:16.42px);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $primery-white-color;
-  }
+    .footer-social__title {
+      margin-bottom: 20px;
+      @include font($fs:14px, $fw:700, $lh:16.42px);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $primery-white-color;
+    }
 
-  .footer-social__list {
-    display: flex;
-  }
+    .footer-social__list {
+      display: flex;
+      justify-content: center;
+    }
 
-  .footer-social__item {
-    display: flex;
+    .footer-social__item {
+      display: flex;
 
-    &:not(:last-of-type) {
-      margin-right: 10px;
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+
+    .footer-social__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      fill: $primery-white-color;
+      transition: background-color 250ms $timing-function;
+
+      &:hover,
+      &:focus {
+        background-color: $accent-color;
+      }
     }
   }
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    fill: $primery-white-color;
-    transition: background-color 250ms $timing-function;
-
-    &:hover,
-    &:focus {
+  .footer-subscription {
+    margin-left: auto;
+  
+    .footer-subscription__title {
+      margin-bottom: 20px;
+      @include font($fs:14px, $fw:700, $lh:16px);
+      text-transform: uppercase;
+      color: $primery-white-color;
+    }
+  
+    .footer-subscription__form {
+      // display: flex;
+    }
+  
+    .footer-subscription__email {
+      width: 100%;
+      padding: 15px 16px;
+      margin-right: 12px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.6);
+      @include font($fs:16px, $fw:400, $lh:20px);
+      outline: none;
+      transition: border-color 250ms $timing-function;
+  
+      &:hover,
+      &:focus {
+        border-color: $accent-color;
+      }
+    }
+  
+    .footer-subscription__btn {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 29px;
+      border-color: transparent;
+      border-radius: 4px;
       background-color: $accent-color;
+      @include font($fs:16px, $fw:700, $lh:30px);
+      color: $primery-white-color;
+      cursor: pointer;
+      transition: background-color 250ms $timing-function;
+  
+      &:hover,
+      &:focus {
+        background-color: $bg-hover-blue-color;
+      }
+    }
+  
+    .footer-subscription__icon-telegram:after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/icon-send.svg');
+      vertical-align: middle;
+      }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .footer__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-social {
+      margin-left: 165px;
+    }
+
+    .footer-subscription {
+      .footer-subscription__email {
+        width: 450px;
+      }
     }
   }
 }
 
-.footer-subscription {
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
 
-  &__title {
-    margin-bottom: 20px;
-    @include font($fs:14px, $fw:700, $lh:16px);
-    text-transform: uppercase;
-    color: $primery-white-color;
-  }
+    .container {
+      display: flex;
+      align-items: baseline;
+    }
 
-  &__form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+    .footer__wrapper {
+      display: flex;
+      justify-content:flex-start;
+    }
 
-  &__email {
-    width: 358px;
-    padding: 15px 16px;
-    margin-right: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.6);
-    @include font($lh:20px);
-    outline: none;
-    transition: border-color 250ms $timing-function;
+    .footer__list {
+      margin-bottom: 0;
+    }
 
-    &:hover,
-    &:focus {
-      border-color: $accent-color;
+    .footer-social {
+      margin-left: 70px;
+      margin-bottom: 0;
     }
   }
 
-  &__btn {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 29px;
-    border-color: transparent;
-    border-radius: 4px;
-    background-color: $accent-color;
-    @include font($fs:16px, $fw:700, $lh:30px);
-    color: $primery-white-color;
-    cursor: pointer;
-    transition: background-color 250ms $timing-function;
+  .footer-subscription {
+    .footer-subscription__form {
+      display: flex;
 
-    &:hover,
-    &:focus {
-      background-color: $bg-hover-blue-color;
+      .footer-subscription__email {
+        width: 358px;
+        margin-bottom: 0;
+      }
     }
+
+    
   }
-
-  &__icon-telegram:after {
-    content: '';
-    display: inline-block;
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    background-image: url('../images/icon-send.svg');
-    vertical-align: middle;
-    }
 }
+
+// .footer {
+//   background-color: $bg-dark-color;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+
+//   .container {
+//     display: flex;
+//     align-items: baseline;
+//   }
+
+//   &__item:not(:last-of-type) {
+//     margin-bottom: 9px;
+//   }
+
+//   .footer__link {
+//     color: $text-color-grey;
+//     line-height: 1.71;
+//   }
+
+//   .footer__link_color-white {
+//     color: $primery-white-color;
+//   }
+// }
+
+// .footer-social {
+//   margin-left: 70px;
+
+//   .footer-social__title {
+//     margin-bottom: 20px;
+//     @include font($fs:14px, $fw:700, $lh:16.42px);
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     color: $primery-white-color;
+//   }
+
+//   .footer-social__list {
+//     display: flex;
+//   }
+
+//   .footer-social__item {
+//     display: flex;
+
+//     &:not(:last-of-type) {
+//       margin-right: 10px;
+//     }
+//   }
+
+//   &__link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 44px;
+//     height: 44px;
+//     background: rgba(255, 255, 255, 0.1);
+//     border-radius: 50%;
+//     fill: $primery-white-color;
+//     transition: background-color 250ms $timing-function;
+
+//     &:hover,
+//     &:focus {
+//       background-color: $accent-color;
+//     }
+//   }
+// }
+
+// .footer-subscription {
+//   margin-left: auto;
+
+//   &__title {
+//     margin-bottom: 20px;
+//     @include font($fs:14px, $fw:700, $lh:16px);
+//     text-transform: uppercase;
+//     color: $primery-white-color;
+//   }
+
+//   &__form {
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//   }
+
+//   &__email {
+//     width: 358px;
+//     padding: 15px 16px;
+//     margin-right: 12px;
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     border-radius: 4px;
+//     background-color: transparent;
+//     color: rgba(255, 255, 255, 0.6);
+//     @include font($lh:20px);
+//     outline: none;
+//     transition: border-color 250ms $timing-function;
+
+//     &:hover,
+//     &:focus {
+//       border-color: $accent-color;
+//     }
+//   }
+
+//   &__btn {
+//     display: block;
+//     margin: 0 auto;
+//     padding: 10px 29px;
+//     border-color: transparent;
+//     border-radius: 4px;
+//     background-color: $accent-color;
+//     @include font($fs:16px, $fw:700, $lh:30px);
+//     color: $primery-white-color;
+//     cursor: pointer;
+//     transition: background-color 250ms $timing-function;
+
+//     &:hover,
+//     &:focus {
+//       background-color: $bg-hover-blue-color;
+//     }
+//   }
+
+//   &__icon-telegram:after {
+//     content: '';
+//     display: inline-block;
+//     margin-left: 10px;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url('../images/icon-send.svg');
+//     vertical-align: middle;
+//     }
+// }

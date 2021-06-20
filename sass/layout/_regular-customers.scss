@@ -41,6 +41,14 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .regular-customers {
+    .regular-customers__item {
+      flex-basis: calc((100% - (30px * 1)) / 1);
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .regular-customers {
     .regular-customers__item {
