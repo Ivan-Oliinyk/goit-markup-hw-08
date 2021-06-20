@@ -577,21 +577,14 @@ summary {
 }
 
 @media screen and (max-width: 479px) {
+  .modal {
+    padding: 8%;
+  }
   .form .form__field:hover .form__label,
   .form .form__field:focus .form__label,
   .form .form__field-textarea:hover .form__label,
   .form .form__field-textarea:focus .form__label {
     color: #2196f3;
-  }
-  .form .subscription {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .modal {
-    padding: 8%;
   }
 }
 

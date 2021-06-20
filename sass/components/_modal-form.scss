@@ -152,6 +152,10 @@
 }
 
 @media screen and (max-width: 479px) {
+  .modal {
+    padding: 8%;
+  }
+  
   .form {
     .form__field:hover .form__label,
     .form__field:focus .form__label,
@@ -160,17 +164,13 @@
       color: $accent-color;
     }
 
-    .subscription {
-      flex-wrap: wrap;
-    }
+    // .subscription {
+    //   flex-wrap: wrap;
+    // }
   }
 }
 
-@media screen and (max-width: 479px) {
-  .modal {
-    padding: 8%;
-  }
-}
+
 
 @media screen and (min-width: 480px) {
   .modal {
