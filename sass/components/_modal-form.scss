@@ -1,7 +1,9 @@
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
+  margin-top: 94px;
+  margin-bottom: 94px;
   padding: 40px;
   width: calc(100% - 30px);
   min-height: 581px;
@@ -110,7 +112,7 @@
     margin-bottom: 30px;
     padding-left: 24px;
     @include font($fs:12px, $lh:14px)
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
     color: $primary-text-color;
 
     .subscription__checkbox {
@@ -119,7 +121,6 @@
     }
 
     .subscription__checkbox-label {
-      // margin-left: 24px;
       margin-right: 0.25em;
       cursor: pointer;
     }
@@ -144,7 +145,6 @@
 
     .subscription__link {
       display: inline-block;
-      // margin-left: 0.25em;
       text-decoration: underline;
       color: $accent-color;
     }
@@ -163,10 +163,6 @@
     .form__field-textarea:focus .form__label {
       color: $accent-color;
     }
-
-    // .subscription {
-    //   flex-wrap: wrap;
-    // }
   }
 }
 
@@ -176,6 +172,8 @@
   .modal {
     max-width: 480px;
   }
+
+  // do some
 }
 
 @media screen and (min-width: 1200px) {

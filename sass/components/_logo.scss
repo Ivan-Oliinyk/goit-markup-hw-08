@@ -1,23 +1,37 @@
 .logo {
-  @include font($fs:26px, $fw: 700, $lh: 30.52px);
+  display: flex;
+  @include font($fs: 24px, $fw: 700, $lh: 28px);
 
   color: $title-text-color;
   font-family: $secondary--font-family;
-  letter-spacing: 0.03em;
+  // letter-spacing: 0.03em;
 
-  &__text {
+  .logo__text {
     color: $accent-color;
+    // margin-right: -0.25em;
   }
 
-  &_color_white {
+  .logo_color_white {
     color: $primery-white-color;
   }
 
-  &_margin-bottom {
+  .logo_margin-bottom {
     margin-bottom: 20px;
   }
 
-  &_display-inline-block {
+  .logo_display-inline-block {
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .logo {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font($fs: 26px, $fw: 700, $lh: 30.52px);
   }
 }
