@@ -598,31 +598,29 @@ summary {
   color: #2196f3;
 }
 
-@media screen and (max-width: 320px) {
-  .modal .modal__content {
-    font-size: 16px;
-  }
-}
-
 @media screen and (max-width: 479px) {
   .modal {
-    padding: 35px 20px 20px;
+    padding: 40px 15px 15px;
   }
   .modal .modal__content {
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
   .modal .form .form__field {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .modal .form .form__textarea {
     min-height: 90px;
+    margin-bottom: 10px;
   }
   .modal .form .form__field:hover .form__label,
   .modal .form .form__field:focus .form__label,
   .modal .form .form__field-textarea:hover .form__label,
   .modal .form .form__field-textarea:focus .form__label {
     color: #2196f3;
+  }
+  .modal .subscription {
+    margin-bottom: 15px;
   }
 }
 
