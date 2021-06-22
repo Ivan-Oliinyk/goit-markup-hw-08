@@ -19,8 +19,8 @@
     margin-bottom: 20px;
   }
 
-  .logo_display-inline-block {
-    display: inline-block;
+  &.logo_display-inline-block {
+    margin-bottom: 20px;
   }
 }
 
@@ -33,5 +33,7 @@
 @media screen and (min-width: 1200px) {
   .logo {
     @include font($fs: 26px, $fw: 700, $lh: 30.52px);
+    justify-content: start;
+    
   }
 }

@@ -8,9 +8,16 @@
     margin-bottom: 60px;
   }
 
+  .footer__item {
+    @include font($fs:14px, $fw:400, $lh:24px);
+  }
+
+  .footer__item:not(:last-of-type) {
+  margin-bottom: 8px; 
+  }
+
   .footer__link {
     color: $text-color-grey;
-    line-height: 1.71;
   }
 
   .footer__link_color-white {
@@ -157,6 +164,10 @@
 
     .footer__list {
       margin-bottom: 0;
+    }
+
+    .footer__item:not(:last-of-type) {
+      margin-bottom: 9px; 
     }
 
     .footer-social {
