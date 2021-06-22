@@ -2,11 +2,10 @@
   position: relative;
   top: 50%;
   left: 50%;
-  margin-top: 94px;
   margin-bottom: 94px;
   padding: 40px;
   width: calc(100% - 30px);
-  min-height: 581px;
+  min-height: 520px;
   color: $title-text-color;
   background-color: $primery-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -151,17 +150,38 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .modal {
+    .modal__content {
+      font-size: 16px;
+    }
+  }
+}
+
 @media screen and (max-width: 479px) {
   .modal {
-    padding: 8%;
-  }
+    padding: 35px 20px 20px;
+
+    .modal__content {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .form {
+      .form__field {
+        margin-bottom: 15px;
+      }
+
+      .form__textarea {
+        min-height: 90px;
+      }
   
-  .form {
-    .form__field:hover .form__label,
-    .form__field:focus .form__label,
-    .form__field-textarea:hover .form__label,
-    .form__field-textarea:focus .form__label {
-      color: $accent-color;
+      .form__field:hover .form__label,
+      .form__field:focus .form__label,
+      .form__field-textarea:hover .form__label,
+      .form__field-textarea:focus .form__label {
+        color: $accent-color;
+      }
     }
   }
 }
