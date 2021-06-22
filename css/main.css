@@ -1155,6 +1155,9 @@ h3 {
     margin-right: 15px;
     margin-left: 15px;
   }
+  .features .features__list-title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {
